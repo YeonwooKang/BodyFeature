@@ -16,7 +16,7 @@ srcImage = imread(ImageName) # 이미지 파일 이름을 이용해 이미지를
 
 Dst = ctb.get_BinaryImage(srcImage)
 print srcImage.dtype, srcImage.shape, srcImage.size # 3차원 배열로 나옴
-print Dst.dtype, Dst.shape, Dst.size
+#print Dst.dtype, Dst.shape, Dst.size
 
 # 실제 키가 170 인 것으로 가정
 height = 170.00 * 10 # 170.00 * 10 mm
@@ -42,9 +42,8 @@ img = cv.circle(srcImage,(pp.x,pp.y),10,(0,0,255),-1)
 
 # 이미지 보이기
 cv.imshow('BodyFeature-Origin', srcImage) # 원본 이미지
-cv.imshow('BodyFeature', img) # 후처리 이미지
+cv.imshow('BodyFeature', Dst) # 후처리 이미지
 cv.waitKey()
-
 
 # 가로선을 그리는 메소드
 # def draw_position(edge, line):
